@@ -5,7 +5,7 @@ require 'aws-sdk'
 require 'yaml'
 require 'terminal-notifier'
 
-AWS.config(YAML.load_file(File.expand_path("~/.aws/awsconfig.yaml")))
+AWS.config(YAML.load_file(File.expand_path('~/.aws/awsconfig.yaml')))
 $s3 = AWS::S3.new
 
 def upload(file_name)
@@ -17,7 +17,7 @@ def upload(file_name)
   bucket.objects[key_name].write(:file => file_name)
   
   pbcopy(url)
-  TerminalNotifier.notify("File is now available @ " << url)
+  TerminalNotifier.notify('File is now available @ ' << url)
 end
 
 def pbcopy(input)
@@ -35,6 +35,6 @@ ARGV.each do |f|
   if File.file?(f)
     upload(f)
   else
-    TerminalNotifier.notify("s3up will not upload directory " << f)
+    TerminalNotifier.notify('s3up will not upload directory ' << f)
   end
 end
