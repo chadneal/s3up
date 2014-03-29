@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="aws-sdk (v1.24.0, RVM: ruby-1.9.3-p392) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.8.0, RVM: ruby-1.9.3-p392) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.5.9, RVM: ruby-1.9.3-p392) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubygems-update (v2.1.10, RVM: ruby-1.9.3-p392) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="terminal-notifier (v1.5.1, RVM: ruby-1.9.3-p392) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="uuidtools (v2.1.4, RVM: ruby-1.9.3-p392) [gem]" level="application" />
+  </component>
+</module>
+
