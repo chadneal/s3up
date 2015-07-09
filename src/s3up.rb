@@ -7,12 +7,13 @@ require 'terminal-notifier'
 
 def upload(file_name)
 
+  config = YAML.load_file(File.expand_path('~/.s3up/config.yaml'))
   Aws.config.update({
                         region: 'us-east-1',
-                        credentials: Aws::SharedCredentials.new(profile_name: 'chadneal')
+                        credentials: Aws::SharedCredentials.new(profile_name: config[0]['profile'])
   })
   s3 = Aws::S3::Resource.new
-  bucket_name = 'www.chadneal.com'
+  bucket_name = config[0]['bucket']
   key_name = File.basename(file_name)
   url = 'http://' << bucket_name << '/' << key_name
 
