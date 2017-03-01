@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>417</string>
+	<string>428</string>
 	<key>AMApplicationVersion</key>
-	<string>2.6</string>
+	<string>2.7</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -132,7 +132,7 @@
 					<key>COMMAND_STRING</key>
 					<string>for f in "$@"
 do
-	/Users/chad.neal/.rbenv/shims/ruby /Users/chad.neal/chadneal-mbp/projects/s3up/src/s3up.rb "$f"
+	/Users/chadneal/.rbenv/shims/ruby /Users/chadneal/home/code/s3up/src/s3up.rb "$f"
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -246,7 +246,7 @@ done</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>520.500000:319.000000</string>
+				<string>309.000000:319.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
@@ -256,7 +256,7 @@ done</string>
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>734D486A-6441-43F1-9BBC-C933917DE0FD</key>
+		<key>EE0E75B8-AA4F-4196-A604-48D20ABD182C</key>
 		<dict>
 			<key>from</key>
 			<string>9C1C3AA9-9C64-4619-B616-C3C40661B406 - 9C1C3AA9-9C64-4619-B616-C3C40661B406</string>
