@@ -15,12 +15,19 @@ def upload(file_name)
   s3 = Aws::S3::Resource.new
   bucket_name = config[0]['bucket']
   key_name = File.basename(file_name)
-  url = 'http://' << bucket_name << '/' << key_name
 
-  obj = s3.bucket(bucket_name).object(key_name).upload_file(file_name)
+  # JS - Not Needed Since we are getting the pre-signed time bomb URL below
+  #  url = 'http://' << bucket_name << '/' << key_name
+  
+  s3.bucket(bucket_name).object(key_name).upload_file(file_name)
+  
+  # JS - Added to get the Secure Time Bomb for the File.
+  s3 = Aws::S3::Client.new
+  signer = Aws::S3::Presigner.new(client: s3, secure: config[0]['secure'], expires_in: config[0]['expires_in'])
+  surl = signer.presigned_url(:get_object, bucket: bucket_name, key: key_name)
 
-  pbcopy(url)
-  TerminalNotifier.notify('File is now available @ ' << url)
+  pbcopy(surl)
+  TerminalNotifier.notify('File is now available @ ' << surl)
 end
 
 def pbcopy(input)
